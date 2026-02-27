@@ -13,6 +13,10 @@
   background-attachment: fixed;
   padding: 140px 2rem 60px; // Un peu plus d'espace pour le header empilé
   color: white;
+
+  @media (max-width: 600px) {
+    padding: 130px 1rem 40px; // Ajustement mobile
+  }
 }
 
 .cours-container {
@@ -36,7 +40,8 @@
   }
 
   @media (max-width: 600px) {
-    padding: 1.5rem; // Réduit le padding interne sur mobile
+    padding: 1.5rem 1rem; // Encore plus optimisé
+    h1 { font-size: 2rem; }
   }
 }
 

@@ -7,6 +7,10 @@
   background-size: cover;
   background-attachment: fixed;
   padding-top: 80px; // Espace pour le header fixe
+
+  @media (max-width: 600px) {
+    padding-top: 130px; // Plus d'espace sur mobile car le header est plus haut
+  }
 }
 
 .contact-container {
@@ -95,5 +99,8 @@
 }
 
 @media (max-width: 768px) {
-  .contact-container .contact-card { grid-template-columns: 1fr; }
+  .contact-container {
+    padding: 20px 1rem; // Marges réduites
+    .contact-card { grid-template-columns: 1fr; }
+  }
 }
