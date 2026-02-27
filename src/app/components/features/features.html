@@ -15,10 +15,15 @@
 
         <h3 class="feature-title">{{ item.title }}</h3>
 
+        <p class="feature-desc">{{ item.desc }}</p>
+
         @if (item.title === 'Concentration') {
-          <app-timer></app-timer>
-        } @else {
-          <p class="feature-desc">{{ item.desc }}</p>
+          <a [routerLink]="['/studio']" class="learn-more">Ouvrir le Timer & Sons →</a>
+        } 
+        @else if (item.title === 'Lecture') {
+          <a [routerLink]="['/cours']" class="learn-more">Gérer mes tâches →</a>
+        } 
+        @else {
           <a href="#" class="learn-more">En savoir plus →</a>
         }
       </div>

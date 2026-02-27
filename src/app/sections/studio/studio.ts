@@ -2,15 +2,20 @@ import { Component, inject, AfterViewInit } from '@angular/core'; // Ajoute Afte
 import { CommonModule } from '@angular/common';
 import { AudioService } from '../../services/audio.service';
 import { animate, stagger } from 'animejs';
+import { Timer } from "../../components/timer/timer";
 
 @Component({
   selector: 'app-studio',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, Timer],
   templateUrl: './studio.html',
   styleUrl: './studio.scss'
 })
 export class Studio implements AfterViewInit {
+  ngOnInit() {
+    // Force le scroll en haut dès que le composant est chargé
+    window.scrollTo(0, 0);
+  }
   public audioService = inject(AudioService);
   readonly sounds = this.audioService.availableSounds;
 

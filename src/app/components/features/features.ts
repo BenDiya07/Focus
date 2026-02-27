@@ -1,11 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { Timer } from '../timer/timer';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-features',
-  imports: [Timer, CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './features.html',
   styleUrl: './features.scss',
 })
