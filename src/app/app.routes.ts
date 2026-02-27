@@ -5,6 +5,8 @@ import { Features } from './components/features/features';
 import { Footer } from './components/footer/footer';
 import { Studio } from './sections/studio/studio';
 import { Cours } from './sections/cours/cours';
+import { Dashboard } from './sections/dashboard/dashboard';
+import { Contact } from './components/footer/contact';
 
 
 export const routes: Routes = [
@@ -16,5 +18,7 @@ export const routes: Routes = [
     //{ path: 'cours', component: Home  },
     { path: 'studio', component: Studio},
     { path: 'cours', component: Cours},
+    { path: 'dashboard', component: Dashboard},
+    { path: 'contact', component: Contact},
     { path: '**', redirectTo: '' }
 ];
